@@ -7,7 +7,10 @@ public class ElectronicWatch {
         Scanner scanner = new Scanner(System.in);
         int seconds = scanner.nextInt();
 
+        int hour = (seconds / 3600) % 24;
+        int minute = (seconds % 3600) / 60;
+        int second = (seconds % 3600) % 60 ;
 
-
+        System.out.printf("%01d:%02d:%02d", hour, minute, second);
     }
 }
